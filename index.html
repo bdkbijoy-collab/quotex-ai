@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="QUOTEX AI">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <title>QUOTEX AI</title>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="logo">Q<span>AI</span></div>
+      <div><h1>QUOTEX AI</h1><p>Market analysis assistant</p></div>
+      <span class="pill offline" id="connection">OFFLINE</span>
+    </header>
+
+    <section class="panel">
+      <div class="label">MARKET</div>
+      <select id="market">
+        <option>EUR/CHF (OTC)</option>
+        <option>EUR/USD</option>
+        <option>GBP/USD</option>
+        <option>USD/JPY</option>
+        <option>Gold (XAU/USD)</option>
+      </select>
+      <div class="grid">
+        <div><div class="label">TIMEFRAME</div><div class="value">M5</div></div>
+        <div><div class="label">EXPIRY</div><div class="value">5 Minutes</div></div>
+        <div><div class="label">MODE</div><div class="value">DEMO</div></div>
+      </div>
+    </section>
+
+    <section class="signal panel">
+      <div class="label">AI SIGNAL</div>
+      <div class="wait" id="signal">WAIT</div>
+      <p id="reason">লাইভ মার্কেট ডেটা সংযুক্ত হয়নি।</p>
+      <button id="demoBtn">ডেমো স্ক্রিন দেখাও</button>
+      <small>ডেমো ফলাফল বাজার বিশ্লেষণ নয়—ট্রেডের সিদ্ধান্ত হিসেবে ব্যবহার করবেন না।</small>
+    </section>
+
+    <section class="panel">
+      <div class="label">ANALYSIS STATUS</div>
+      <ul>
+        <li><span>Live price feed</span><b class="warn">Not connected</b></li>
+        <li><span>EMA 9 / EMA 21</span><b>Waiting</b></li>
+        <li><span>RSI 14</span><b>Waiting</b></li>
+        <li><span>MACD</span><b>Waiting</b></li>
+        <li><span>Auto trading</span><b class="good">Disabled</b></li>
+      </ul>
+    </section>
+
+    <footer>শিক্ষামূলক টুল। লাভের নিশ্চয়তা নেই। Quotex-এর সঙ্গে কোনো অফিসিয়াল সংযোগ নেই।</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
